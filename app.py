@@ -9,6 +9,7 @@
 
 
 from flask import Flask
+from flask import render_template
 import pandas as pd
 import datetime
 #for regular expression
@@ -25,7 +26,7 @@ def home():
 
 
 
-@app.route("/hellow/<name>")
+@app.route("/hello/<name>")
 def hello(name):
     now = datetime.datetime.now()
     formatted_now = now.strftime("%A, %d %B, %Y at %X")
